@@ -67,3 +67,11 @@ The following packages were updated:
   com.unity.ide.vscode from version 1.2.3 to 1.2.4
   com.unity.render-pipelines.high-definition from version 10.5.0 to 10.8.1
   com.unity.test-framework from version 1.1.27 to 1.1.29
+
+=== Fri Feb  3 06:59:18 2023
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.render-pipelines.universal from version 10.5.1 to 10.8.1
