@@ -5,9 +5,6 @@ public class Interactable : MonoBehaviour
     // Distance the player needs to get to the object to interact with it.
     public float InteractRadius = 3f;
     public Transform interactionTransform;
-    public Transform interactionWithTrees;
-    public Transform interactionWithRocks;
-    public Transform interactionWithFishes;
 
     bool isFocus = false;
     Transform player;
@@ -18,21 +15,6 @@ public class Interactable : MonoBehaviour
     {
         // This method is meant to be overwritten
         Debug.Log("Interacting with" + transform.name);
-
-        if (interactionTransform == interactionWithTrees)
-        {
-            //Woodcutting();
-        }
-        
-        if (interactionTransform == interactionWithRocks)
-        {
-            //Mining();
-        }
-        
-        if (interactionTransform == interactionWithFishes)
-        {
-            //Fishing();
-        }
     }
 
     void Update()
