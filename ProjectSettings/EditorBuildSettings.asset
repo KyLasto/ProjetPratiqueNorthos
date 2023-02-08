@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/HDRP/samplescene/samplescene.unity
-    guid: cbfe36cfddfde964d9dfce63a355d5dd
+    path: Assets/Scenes/Prototype_H2023/Prototype_H2023.unity
+    guid: ba076e636d9038240ab125deb96f0e49
   m_configObjects: {}

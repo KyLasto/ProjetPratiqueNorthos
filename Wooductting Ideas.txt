@@ -1,0 +1,93 @@
+https://forum.unity.com/threads/in-game-skills-woodcutting.104984/
+
+https://forum.unity.com/threads/tree-falling-and-finally-chop-tree.385928/
+
+
+Add it to your inventory:
+
+http://forum.unity3d.com/threads/53599-My-Contribution-Inventory-System-Free (a free one, not the only, but it is an inventory system)
+
+
+ok, lets start simple.
+
+This is the code out of the first link:
+ 
+function OnMouseOver () {
+    renderer.material.color -= Color(0.1, 0, 0) * Time.deltaTime;
+}
+
+
+Lets make a box, and throw that code on the box. When you put your mouse over it, 
+it should start cycling the color over to cyan. 
+As you leave your mouse over it, 
+it will continue to go until it reaches cyan completely.
+
+Taking that code, lets expand add the code from the second link. We are also going to add in a variable to manage the gui and an OnMouseExit function.
+ 
+private var showGUI : boolean = false;
+ 
+function OnMouseOver () {
+    showGUI = true;
+}
+ 
+function OnMouseExit () {
+    showGUI = false;
+}
+ 
+function OnGUI () {
+    if(showGUI)
+        GUI.Label (Rect (10, 10, 100, 20), "Hello World!");
+}
+
+
+OK, so now, when we put our mouse over the cube, we get a gui that says "Hello World!" as if that is useful.
+
+Lets check to see if our mouse button is down... Code from the third link.
+ 
+private var showGUI : boolean = false;
+ 
+function OnMouseOver () {
+    showGUI = true;
+    if(Input.GetMouseButtonDown(0))
+        Debug.Log("Pressed left click.");
+    if(Input.GetMouseButtonDown(1))
+        Debug.Log("Pressed right click.");
+    if(Input.GetMouseButtonDown(2))
+        Debug.Log("Pressed middle click.");
+}
+ 
+function OnMouseExit () {
+    showGUI = false;
+}
+ 
+function OnGUI () {
+    if(showGUI)
+        GUI.Label (Rect (10, 10, 100, 20), "Hello World!");
+}
+
+Now, lets look at the player, and start his "I am cutting down a tree" animation. 
+To do this, we first have to reference the player. We can do this by finding him.
+
+ 
+private var showGUI : boolean = false;
+private var chopping : boolean = false;
+ 
+function OnMouseOver () {
+    showGUI = true;
+    if(Input.GetMouseButtonDown(0))
+        chopping = true;
+   
+    if(chopping)
+        GameObject.Find("Player").animation.CrossFade("Cut");
+}
+ 
+function OnMouseExit () {
+    showGUI = false;
+}
+ 
+function OnGUI () {
+    if(showGUI)
+        GUI.Label (Rect (10, 10, 100, 20), "Chop down this tree");
+}
+ 
+ 
