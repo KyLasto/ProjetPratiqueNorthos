@@ -6,22 +6,34 @@ using UnityEngine;
 
 public class PlayerXP : MonoBehaviour
 {
-    public Level level;
+    public Level combat_level;
+    public Level attack;
+    public Level strength;
+    public Level defence;
+    public Level woodcutting;
+    public Level mining;
+    public Level fishing;
     void Start()
     {
-        level = new Level(1, OnLevelUp);
+        combat_level = new Level(1, OnLevelUp);
+        attack = new Level(1, OnLevelUp);
+        strength = new Level(1, OnLevelUp);
+        defence = new Level(1, OnLevelUp);
+        woodcutting = new Level(1, OnLevelUp);
+        mining = new Level(1, OnLevelUp);
+        fishing = new Level(1, OnLevelUp);
     }
 
     public void OnLevelUp()
     {
         print("levelUp");
-        int oldEXP = level.experience;
-        int newexp = level.GetXpForLevel(level.currentLevel);
-        level.experience = 0;
-        level.experience = (oldEXP - newexp);
     }
     void Update()
     {
-        //level.AddExp()
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            combat_level.AddExp(100);
+        }
+
     }
 }

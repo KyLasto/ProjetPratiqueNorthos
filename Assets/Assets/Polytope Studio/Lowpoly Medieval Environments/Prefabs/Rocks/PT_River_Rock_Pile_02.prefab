@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 1714748972919986588}
   - component: {fileID: 5878917915651223277}
   - component: {fileID: 2557983687228265558}
+  - component: {fileID: 6951756903365376484}
   - component: {fileID: 7318099939465277004}
   m_Layer: 0
   m_Name: PT_River_Rock_Pile_02
@@ -239,6 +240,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractRadius: 3
   interactionTransform: {fileID: 1714748972919986588}
+--- !u!114 &6951756903365376484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055844540189557542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0ca860b97ffbb4e86e15d966097566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: This is a rock.
 --- !u!65 &7318099939465277004
 BoxCollider:
   m_ObjectHideFlags: 0

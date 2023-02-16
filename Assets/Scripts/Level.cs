@@ -24,7 +24,7 @@ public class Level
 
     public int GetXpForLevel(int level)
     {
-        if (level > MAX_LEVEL) // Todo : Throw an exception dependant of game design
+        if (level > MAX_LEVEL) 
             return 0;
         
         int firstPass = 0;
@@ -35,10 +35,10 @@ public class Level
             secondPass = firstPass / 4;
         }
 
-        if (secondPass > MAX_EXP && MAX_EXP != 0) // Todo : Throw an exception dependant of game design
+        if (secondPass > MAX_EXP && MAX_EXP != 0) 
             return MAX_EXP;
 
-        if (secondPass < 0) // Todo : Throw an exception dependant of game design
+        if (secondPass < 0) 
             return MAX_EXP;
         
         return secondPass;

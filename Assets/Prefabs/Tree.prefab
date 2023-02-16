@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7963040898937147349}
   - component: {fileID: 7973469241847551455}
   - component: {fileID: 3495761826923069160}
+  - component: {fileID: 6773667785323755686}
   - component: {fileID: 901675110121027764}
   m_Layer: 0
   m_Name: Tree
@@ -97,6 +98,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractRadius: 3
   interactionTransform: {fileID: 7996936257015560157}
+--- !u!114 &6773667785323755686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993889341571275449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0ca860b97ffbb4e86e15d966097566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: This is a tree.
 --- !u!65 &901675110121027764
 BoxCollider:
   m_ObjectHideFlags: 0
