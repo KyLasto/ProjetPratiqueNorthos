@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Starter Axe
   m_EditorClassIdentifier: 
   name: Starter Axe
-  description: This is a starter axe.
   icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   isDefaultItem: 0

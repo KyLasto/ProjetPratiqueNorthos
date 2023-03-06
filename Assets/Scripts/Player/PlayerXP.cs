@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerXP : MonoBehaviour
 {
+    
     public Level combat_level;
     public Level attack;
     public Level strength;
@@ -32,8 +33,20 @@ public class PlayerXP : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            combat_level.AddExp(100);
-        }
+            // Collider[] hitColliders = Physics.OverlapSphere(transform.position, 15.0f);
+            // Debug.Log(hitColliders.Length);
+            // foreach (var hitCollider in hitColliders)
+            // {
+            //     Interactable interact = hitCollider.GetComponent<Interactable>();
+            //     if (interact != null)
+            //     {
+            //         interact.Interact();
+            //     }
+            // }
 
+            combat_level.AddExp(100);
+            //mining.AddExp(150);
+
+        }
     }
 }

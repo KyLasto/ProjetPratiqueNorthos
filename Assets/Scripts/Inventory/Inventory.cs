@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Inventory : MonoBehaviour
 {
@@ -53,5 +54,35 @@ public class Inventory : MonoBehaviour
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
+    }
+
+    public void IsStarterAxe()
+    {
+        Item StarterAxe = items.Find(x => x.name == "Starter Axe"); 
+        
+        if (StarterAxe != null)
+        {
+            StarterAxe.Use();
+        }
+    }
+
+    public void IsStarterPickaxe()
+    {
+        Item StarterPickaxe = items.Find(x => x.name == "Starter Pickaxe");
+
+        if (StarterPickaxe != null)
+        {
+            StarterPickaxe.Use();
+        }
+    }
+
+    public void IsStarterDagger()
+    {
+        Item StarterDagger = items.Find(x => x.name == "Starter Dagger");
+
+        if (StarterDagger != null)
+        {
+            StarterDagger.Use();
+        }
     }
 }
