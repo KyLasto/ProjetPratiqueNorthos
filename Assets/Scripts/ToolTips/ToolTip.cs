@@ -9,11 +9,11 @@ public class ToolTip : MonoBehaviour
 
    private void OnMouseEnter()
    {
-      ToolTipManager._instance.SetAndShowToolTip(message);
+      ToolTipManager.m_Instance.SetAndShowToolTip(message);
    }
 
    private void OnMouseExit()
    {
-      ToolTipManager._instance.HideToolTip();
+      ToolTipManager.m_Instance.HideToolTip();
    }
 }

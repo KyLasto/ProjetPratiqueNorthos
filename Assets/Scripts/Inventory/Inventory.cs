@@ -9,16 +9,16 @@ public class Inventory : MonoBehaviour
     #region Singleton
 
 
-    public static Inventory instance;
+    public static Inventory m_Instance;
 
     private void Awake()
     {
-        if (instance != null)
+        if (m_Instance != null)
         {
             Debug.LogWarning("More than one instance of Inventory found!");
             return;
         }
-            instance = this;
+            m_Instance = this;
     }
 
     #endregion

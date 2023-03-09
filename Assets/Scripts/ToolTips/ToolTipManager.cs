@@ -6,19 +6,19 @@ using TMPro;
 
 public class ToolTipManager : MonoBehaviour
 {
-    public static ToolTipManager _instance;
+    public static ToolTipManager m_Instance;
 
     public TextMeshProUGUI textComponent;
 
     private void Awake()
     {
-        if (_instance != null && _instance != this)
+        if (m_Instance != null && m_Instance != this)
         {
             Destroy(this.gameObject);
         }
         else
         {
-            _instance = this;
+            m_Instance = this;
         }
     }
 
